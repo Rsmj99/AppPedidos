@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bienvenidaFragment">
+    <fragment
+        android:id="@+id/bienvenidaFragment"
+        android:name="com.example.tareagrupal3.BienvenidaFragment"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/PEDIDOSAPP" >
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+        <action
+            android:id="@+id/action_bienvenidaFragment_to_direccionFragment"
+            app:destination="@id/direccionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clienteFragment"
+        android:name="com.example.tareagrupal3.ui.Cliente.ClienteFragment"
+        android:label="fragment_cliente"
+        tools:layout="@layout/fragment_cliente" >
+        <action
+            android:id="@+id/action_clienteFragment_to_bienvenidaFragment"
+            app:destination="@id/bienvenidaFragment" />
+        <action
+            android:id="@+id/action_clienteFragment_to_direccionFragment"
+            app:destination="@id/direccionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/direccionFragment"
+        android:name="com.example.tareagrupal3.ui.Pedido.PedidoFragment"
+        android:label="fragment_direccion"
+        tools:layout="@layout/fragment_pedido" >
+        <action
+            android:id="@+id/action_direccionFragment_to_bienvenidaFragment"
+            app:destination="@id/bienvenidaFragment" />
+        <action
+            android:id="@+id/action_direccionFragment_to_clienteFragment"
+            app:destination="@id/clienteFragment" />
+    </fragment>
+</navigation>

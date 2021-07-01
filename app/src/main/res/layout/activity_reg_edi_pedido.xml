@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Pedido.ActivityRegEdiPedido"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Código Cliente:"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/et_cliente"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="20dp">
+
+        <android.widget.Button
+            android:id="@+id/btn_fecha"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Fecha Envío"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/purple_700"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_fecha"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="date"
+            android:maxLength="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:text="Cod Dirección:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginEnd="10dp"/>
+
+        <EditText
+            android:id="@+id/et_direccion"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_agregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Detalle"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/lv_detalles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="20dp">
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancelar"
+            android:textSize="22sp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Aceptar"
+            android:textSize="22sp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

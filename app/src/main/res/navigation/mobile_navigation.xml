@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_bienvenida">
+
+    <fragment
+        android:id="@+id/nav_bienvenida"
+        android:name="com.example.tareagrupal3.BienvenidaFragment"
+        android:label="fragment_bienvenida"
+        tools:layout="@layout/PEDIDOSAPP" />
+
+    <fragment
+        android:id="@+id/nav_clientes"
+        android:name="com.example.tareagrupal3.ui.Cliente.ClienteFragment"
+        android:label="@string/menu_cliente"
+        tools:layout="@layout/fragment_cliente" />
+
+    <fragment
+        android:id="@+id/nav_pedidos"
+        android:name="com.example.tareagrupal3.ui.Pedido.PedidoFragment"
+        android:label="@string/menu_pedido"
+        tools:layout="@layout/fragment_pedido" />
+
+</navigation>
